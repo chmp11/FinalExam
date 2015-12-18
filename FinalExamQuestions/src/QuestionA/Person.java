@@ -6,7 +6,7 @@ import java.util.Date;
 /*
  * comment
  */
-public abstract class Person {
+public abstract class Person implements iPersonReadWrite{
 
 	private Date DOB;
 	private String FirstName;
@@ -15,62 +15,6 @@ public abstract class Person {
 	private String address;
 	private String phone_number;
 	private String email_address;
-
-	public String getFirstName() {
-		return FirstName;
-	}
-
-	public void setFirstName(String FirstName) {
-		this.FirstName = FirstName;
-	}
-
-	public String getMiddleName() {
-		return MiddleName;
-	}
-
-	public void setMiddleName(String MiddleName) {
-		this.MiddleName = MiddleName;
-	}
-
-	public String getLastName() {
-		return LastName;
-	}
-
-	public void setLastName(String LastName) {
-		this.LastName = LastName;
-	}
-
-	public Date getDOB() {
-		return DOB;
-	}
-
-	public void setDOB(Date DOB) {
-		this.DOB = DOB;
-	}
-
-	public void setAddress(String newAddress) {
-		address = newAddress;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setPhone(String newPhone_number) {
-		phone_number = newPhone_number;
-	}
-
-	public String getPhone() {
-		return phone_number;
-	}
-
-	public void setEmail(String newEmail) {
-		email_address = newEmail;
-	}
-
-	public String getEmail() {
-		return email_address;
-	}
 
 	/*
 	 * Constructors No Arg Constructor
