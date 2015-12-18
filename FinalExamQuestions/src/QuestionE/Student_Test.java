@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.UUID;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -40,9 +42,18 @@ public class Student_Test {
 			e.printStackTrace();
 		}
 		Student stu1 = new Student("Bert", "Randall", "Gibbons", dBirthDate, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
-
-
-		assertTrue(1==1);
+		Student stu2 = new Student("Jack", "A", "Smith", dBirthDate, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu3 = new Student("Jill", "S", "Peters", dBirthDate, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu4 = new Student("Tom", "D", "Taylor", dBirthDate, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu5 = new Student("Sally", "G", "Klein", dBirthDate, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		HashMap<UUID, Student> students = new HashMap<UUID, Student>(); 
+		students.put(stu1.getPersonID(), stu1);
+		students.put(stu2.getPersonID(), stu2);
+		students.put(stu3.getPersonID(), stu3);
+		students.put(stu4.getPersonID(), stu4);
+		students.put(stu5.getPersonID(), stu5);
+		
+		assertTrue(students.size()==5);
 	}
 
 }
